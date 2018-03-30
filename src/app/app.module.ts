@@ -15,7 +15,8 @@ import { MenuAppComponent } from './body/login/menu-app/menu-app.component';
     BodyComponent,
     FooterComponent,
     LoginComponent,
-    MenuAppComponent
+    MenuAppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
