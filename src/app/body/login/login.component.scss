@@ -1,0 +1,70 @@
+div{
+    margin-top: 90px;
+    text-align: center;
+    section{
+        margin-bottom: 3px;
+    }
+    h3{
+        color: white;
+        font-size: 25px;
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+   
+    table{
+        margin-bottom:10px;
+        tr{
+            display: block;
+            border: solid ,whitesmoke ;
+            width:288px;
+            height:30px;
+            border-radius: 6px;
+            margin-bottom: 3px;
+            float: none;
+            background-color: white;
+            
+        
+        #mot{
+                float: left;
+                margin: 0px;
+                width:288px;
+                height:30px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                font-family :aachen;
+                font-size: 20px;
+                border: none;
+                
+            }
+        #hai{
+            float: left;
+            margin: 0px;
+            width:258px;
+            height:30px;
+            border-bottom-left-radius: 6px;
+            font-family :aachen;
+            font-size: 20px;
+           border: none;
+        }
+        #ba{
+            float: none;
+            margin: 0px;
+            height:30px;
+            border-bottom-right-radius: 6px;
+            padding-top: 2px;
+            background-color: white;
+        }
+    }
+        }
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 20px;
+        input{
+            margin-top: 10px;
+            width:20px;
+            height:20px;
+        }
+    }
+            
+}
