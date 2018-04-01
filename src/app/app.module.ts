@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './body/login/login.component';
+import { MenuAppComponent } from './body/login/menu-app/menu-app.component';
 
 
 @NgModule({
@@ -13,6 +14,8 @@ import { LoginComponent } from './body/login/login.component';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
+    LoginComponent,
+    MenuAppComponent,
     LoginComponent
   ],
   imports: [
