@@ -1,0 +1,139 @@
+div
+{
+    width: 100%;
+    height: 100%;
+    // This's for LEFT
+    #left
+    {
+        width: 25%;
+        height: 100%;
+        background-color: burlywood;
+        float: left;
+        // This is for TOP OF LEFT
+        #top
+        {
+            height: 10%;
+            width: 100%;
+            background-color: #383836;
+            label
+            {
+                float: left;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                margin-top: 10px;
+                color: white;
+            }
+            img
+            {
+                margin-top: 3px;
+            }
+            // This's for IMAGE PLUS of TOP LEFT
+            #image:hover img
+            {
+                filter: invert(1);
+                border-radius:50%;  
+                cursor: pointer;
+            }
+            #image
+            {
+                // position: relative;
+                width: 40px;
+                height: 40px;
+                float: right;
+                // margin: 4px 4px 0px 0px;
+                img
+                {
+                    transition: all .3s ease-in-out;
+                    margin: 5px;
+                }
+                
+            }
+        }
+        // This is for Content of LEFT
+        #content
+        {
+            position: relative;
+            height: 90%;
+            width: 100%;
+            background-color: rgb(102, 102, 102);
+            overflow: auto;    
+            ul
+            {
+                position: absolute;
+                list-style: none;
+                margin: 0;
+                padding: 0px 0px 0px 0px;
+                width: 100%;
+                li
+                {
+                    width: 100%;
+                    height: 40px;
+                    background-color: rgb(102, 102, 102);
+                    border-bottom: solid 1px;
+                    line-height: 40px;
+                    text-align: center;
+
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: 500;
+                    
+                    // label
+                    // {
+                    //     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    //     font-size: 20px;
+                    //     font-style: italic;
+                    //     font-weight: 500;
+                    //     color: white;
+                    // }
+                }
+                #target 
+                {
+                    display:none;
+                    width: 100%;
+                    height: 30px;
+                    background-color: rgb(206, 205, 205);
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    //This is for RIGHT
+    #right
+    {
+        width: 75%;
+        height: 100%;
+        background-color: rgb(211, 211, 211);
+        float: left;
+        #search
+        {
+            height: 10%;
+            width: 100%;
+            // background-color: rgb(182, 115, 15);
+            input
+            {
+                width: 500px;
+                height: 43px;
+                border: solid 1px gainsboro;
+                font-size: 20px;
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            button
+            {
+                width: 150px;
+                height: 43px;
+                border-radius: 30px;
+                border: solid 3px white;
+                background-color: whitesmoke;
+            }
+        }
+        #content
+        {
+            height: 90%;
+            width: 100%;
+            // background-color: rgb(163, 149, 24);              
+        }
+    }
+}

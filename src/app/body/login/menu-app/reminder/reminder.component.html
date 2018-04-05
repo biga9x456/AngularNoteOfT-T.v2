@@ -1,0 +1,48 @@
+<div>
+  <!-- Left -->
+  <div id="left">
+    <!-- Top -->
+    <div id="top">
+      <label style="margin-left: 5px;">Reminder</label>
+      <img src="../../../../../assets/note.png" width="40px" height="40px" style="filter: invert(1);"/>
+      <!-- Image -->
+      <div id="image">
+        <img class="toggle" src="../../../../../assets/plus.png" width="30px" height="30px"/>
+        <!-- <div id="target"><input type="text" placeholder="Want to create new Reminder?"></div> -->
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <ul id="list">
+          <input id="target" type="text" [(ngModel)]="reminder" (keyup.enter)="addReminder(reminder)" placeholder="Hello there!!!">
+        <li *ngFor="let item of reminders">
+          <label for="">{{item.title}}</label>
+          <input type="checkbox" [(ngModel)]="item.completed">
+        </li>
+        <li class="footer">
+          <div>
+            0 items left
+          </div>
+        </li>
+    </ul>
+
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div id="right">
+    <!-- Search -->
+    <div id=search>
+      <input type="text" placeholder="Search your reminders..."/>
+      <button>Search</button>
+    </div>
+
+    <!-- Content -->
+    <div id=content>
+      
+    </div>
+
+  </div>
+</div>
+

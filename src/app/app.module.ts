@@ -6,8 +6,9 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './body/login/login.component';
 import { MenuAppComponent } from './body/login/menu-app/menu-app.component';
-
-
+import { ReminderComponent } from './body/login/menu-app/reminder/reminder.component';
+import { FormsModule } from '@angular/forms';
+import { CoreModule } from '../core/core,module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,10 +17,13 @@ import { MenuAppComponent } from './body/login/menu-app/menu-app.component';
     FooterComponent,
     LoginComponent,
     MenuAppComponent,
-    LoginComponent
+    LoginComponent,
+    ReminderComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
