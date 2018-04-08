@@ -15,16 +15,30 @@
     <!-- Content -->
     <div id="content">
       <ul id="list">
-          <input id="target" type="text" [(ngModel)]="reminder" (keyup.enter)="addReminder(reminder)" placeholder="Hello there!!!">
+        <input id="target" type="text" [(ngModel)]="reminder" (keyup.enter)="addReminder(reminder)" placeholder="Hello there!!!">
         <li *ngFor="let item of reminders">
-          <label for="">{{item.title}}</label>
-          <input type="checkbox" [(ngModel)]="item.completed">
+              <a (click)="deleteReminder($event, item)" for="">{{item.title}}</a>
+              <img src="../../../../../assets/x.png" width="15px" height="15px" (dbclick) = "deleteItem($event, item)"/>
         </li>
-        <li class="footer">
+
+        <!-- <li>
+          <a for="">abc</a>
+        </li>
+
+        <li>
+          <a for="">def</a>
+        </li> -->
+
+        <div *ngIf="reminders < 1" style="color:rgb(223, 223, 223);">
+          <p>Click the " + " button to start create your Remindes.</p>
+          <p style="text-align: center"> !!!JUST DO IT!!! </p>
+        </div>
+
+        <!-- <li class="footer">
           <div>
             0 items left
           </div>
-        </li>
+        </li> -->
     </ul>
 
     </div>
@@ -34,8 +48,7 @@
   <div id="right">
     <!-- Search -->
     <div id=search>
-      <input type="text" placeholder="Search your reminders..."/>
-      <button>Search</button>
+      <input id="inputSearch" type="text" (keyup)="search()" placeholder="Search your reminders..."/>
     </div>
 
     <!-- Content -->

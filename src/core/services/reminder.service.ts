@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
 import { MyReminder } from '../models/MyReminder';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class ReminderService {
-  constructor(private db: AngularFirestore) { }
   _reminders: BehaviorSubject<Array<MyReminder>> = new BehaviorSubject(new Array());
+  
+  reminderDoc: AngularFirestoreDocument<MyReminder>;
+
   get reminders() {
     return this._reminders.asObservable();
   }
+
+  constructor(private db: AngularFirestore) {
+   }
 
   loadReminders() {
     this.db.collection('reminders').snapshotChanges().subscribe(actions => {
@@ -30,7 +36,8 @@ export class ReminderService {
     this.db.collection('reminders').add(reminder);
   }
 
-  removeReminder() {
-
+  deleteReminder(item: MyReminder) {
+    this.reminderDoc = this.db.doc(`reminders/${item.title}`);
+    this.reminderDoc.delete();
   }
 }
