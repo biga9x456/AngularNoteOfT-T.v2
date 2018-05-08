@@ -1,0 +1,76 @@
+<div id="tong" >
+  <section id="header">
+          <h3>Tạo ID</h3>
+  </section>
+  <!-- <form (ng-submit)="addInfo()"> -->
+  <form>
+    <div id="mot">
+      
+      <table>
+        <tr>
+          <td class="tdintext" style="margin-right:0.8em; ">
+            <input required type="text" [(ngModel)]="info.ho" name="ho" placeholder="họ của bạn" class="intext"  style="margin-right:0.5em;" [ngModelOptions]="{standalone:true}">
+          </td>
+          <td class="tdintext">
+            <input required type="text" [(ngModel)]="info.ten" name="ten"placeholder="tên của bạn" class="intext" [ngModelOptions]="{standalone:true}">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" >  
+              <select required id="opption" [(ngModel)]="info.country" [ngModelOptions]="{standalone:true}" name="country"style="width:100% ; height: 1.3em; border-radius: 3px; font-family: 'Times New Roman', Times, serif ; font-size: 1.2em; color:gray; border: solid 1px rgb(236, 238, 238);margin-bottom:10px; "> 
+                <option value="" disabled selected>Quê hương của bạn</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="China">China</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td id="date" colspan="2" >
+            <input required type="date" [(ngModel)]="info.date" [ngModelOptions]="{standalone:true}" country="date"id="indate" value="ngày sinh"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="hai">
+      <table>
+        <tr>
+          <input required type="email" [(ngModel)]="info.email" [ngModelOptions]="{standalone:true}" name="email" placeholder="name@example.com" >
+        </tr>
+        <tr>
+          <input required type="password" placeholder="mật khẩu" [ngModelOptions]="{standalone:true}" [(ngModel)]="info.pass" name="pass">
+        </tr>
+        <tr>
+          <input required type="password" placeholder="xác nhận mật khẩu" [ngModelOptions]="{standalone:true}" [(ngModel)]="info.pass" name="pass">
+        </tr>
+      </table>
+    </div>
+    <div id="ba">
+      <table>
+        <tr>
+          <p style="margin-bottom:0px; font-size: 1em;" >Câu hỏi để xác thực bạn khi bạn cần đổi mật khẩu </p>
+          <select  required [ngModelOptions]="{standalone:true}" [(ngModel)]="info.question1" name="question1" style="width:100% ;height: 1.6em; border-radius: 3px; font-family: 'Times New Roman', Times, serif ;  font-size: 1.2em; color:gray; margin-bottom:1em; border: solid 1px rgb(236, 238, 238);"> >
+            <option value="" disabled selected >Câu hỏi bảo mật 1</option>
+            <option value="Trường học Đầu tiên của bạn tên gì ?"> Trường học Đầu tiên của bạn tên gì ?</option>
+          </select>
+        </tr>
+        <tr>
+          <input required type="text"[ngModelOptions]="{standalone:true}" [(ngModel)]="info.answer1" name="answer1"></tr>
+        <tr>
+            <select required [(ngModel)]="info.question2" [ngModelOptions]="{standalone:true}" name="question2" style="margin-bottom:1em; width:100% ;height: 1.6em;border-radius: 3px; font-family: 'Times New Roman', Times, serif ;  font-size: 1.2em;color:gray;border: solid 1px rgb(236, 238, 238);">
+              <option value="" disabled selected >Câu hỏi bảo mật 2</option>
+              <option value="Người yêu đầu tiên của bạn tên gì ?" >Người yêu đầu tiên của bạn tên gì ?</option>
+            </select>
+          </tr>
+          <tr>
+            <input required type="text" [(ngModel)]="info.answer2" [ngModelOptions]="{standalone:true}" name="answer2">        
+          </tr>        
+      </table>
+    </div>
+  </form>
+  <section id="footer">
+      <input type ="button" value="Tạo" id="create" [routerLink]="['/welcome']" (click)="addInfo()">
+      <input type="button" value="Hủy" id="cancel" [routerLink]="['/login']">
+  </section>
+  </div>
+<router-outlet></router-outlet>

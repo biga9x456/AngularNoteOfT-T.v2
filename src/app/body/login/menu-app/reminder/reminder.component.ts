@@ -53,7 +53,7 @@ export class ReminderComponent implements OnInit {
     });
 
     function search() {
-      var input, filter, ul, li, a, i;
+      let input, filter, ul, li, a, i;
       input = document.getElementById('inputSearch');
       filter = input.value.toUpperCase();
       ul = document.getElementById('list');

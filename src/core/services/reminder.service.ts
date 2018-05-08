@@ -8,7 +8,7 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class ReminderService {
   _reminders: BehaviorSubject<Array<MyReminder>> = new BehaviorSubject(new Array());
-  
+
   reminderDoc: AngularFirestoreDocument<MyReminder>;
 
   get reminders() {

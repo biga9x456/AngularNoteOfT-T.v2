@@ -1,71 +1,124 @@
-div{
-    margin-top: 90px;
+$padding-horizontal:10px;
+$highlight-color:#16abf0;
+:host{
     text-align: center;
-    section{
-        margin-bottom: 3px;
-    }
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
     h3{
-        color: white;
-        font-size: 25px;
-        margin-top:0px;
-        margin-bottom: 0px;
+        color:white;
+        font-size:25pt
     }
-   
-    table{
-        margin-bottom:10px;
-        tr{
-            display: block;
-            border: solid ,whitesmoke ;
-            width:288px;
-            height:30px;
-            border-radius: 6px;
-            margin-bottom: 3px;
-            float: none;
-            background-color: white;
-            
+    .icon{
+      padding-top: 3em;
+    }
+    #btn{
+        position:absolute; 
+        top:0.8em;
+        left:33em;
+        display:block;
+        z-index:3;
+      }
+    form{
+        width:500px;
+        margin:0 auto;
+        background:white;
+        border-radius:10px;
+        margin-bottom:20px;
+        //padding:20px;
+      }
+     
+      :focus::-webkit-input-placeholder {
+          color: $highlight-color;
+      
+      }
+    //   ::-webkit-input-placeholder {
+    //     color: $highlight-color;
+    //  }
+     
+    //  :-moz-placeholder { /* Firefox 18- */
+    //     color: $highlight-color;  
+    //  }
+     
+    //  ::-moz-placeholder {  /* Firefox 19+ */
+    //     color: $highlight-color;  
+    //  }
+     
+    //  :-ms-input-placeholder {  
+    //     color: $highlight-color;  
+    //  }
+      .input, .floating-placeholder{
+        font-family:Helvetica, Arial, sans-serif;
+        font-size:20pt;
+        line-height:2.6em;
+        height:2.6em;
+        margin:0;
+        padding:0;
+        width:100%;
+        z-index:2;
+      }
+      .floating-placeholder .input:focus+.label{
+        color:$highlight-color;
+      }
+      .floating-placeholder .input[value]+.label{
+        color:red;
+      }
+      .floating-placeholder{
+        position:relative;
+      }
+      
+      .floating-placeholder .input{
+        font-size:20pt;
+        border:none;
+        outline:none;
+        position:absolute;
+        top:0;
+        left:0;
+        display:block;
+        background:transparent;
+        z-index:2;
+        border-bottom:1px solid #ccc;
+        text-indent:$padding-horizontal;
+      }
+      
+      .floating-placeholder:last-child .input{
+        border-bottom:none;
+      }
+      .floating-placeholder .label{
+        display:block;
+        position:absolute;
+        top:0;
+        left:$padding-horizontal;
+        font-size:20pt;
+        z-index:1;
+        transform-origin:(0,0.0em);
+        transition:transform 160ms, color 200ms;
+        -webkit-transition: display none;;
+        transform:scale(1,1) rotateY(0);
+        color:#999;
         
-        #mot{
-                float: left;
-                margin: 0px;
-                width:288px;
-                height:30px;
-                border-top-left-radius: 6px;
-                border-top-right-radius: 6px;
-                font-family :aachen;
-                font-size: 20px;
-                border: none;
-                
-            }
-        #hai{
-            float: left;
-            margin: 0px;
-            width:258px;
-            height:30px;
-            border-bottom-left-radius: 6px;
-            font-family :aachen;
-            font-size: 20px;
-           border: none;
+        
+      }
+      .floating-placeholder-float .label{
+        transform-origin:(0,5);
+        transform-origin: left center;
+        transform:scale(0,0) rotateY(0);
+      }
+      .floating-placeholder-float .input{
+        line-height:3.4em;
+      }
+      p{
+        font-family:Helvetica, Arial, sans-serif;
+        color:white;
+        font-size:17pt;
+        a{
+            color: white;
+            text-decoration: none;
         }
-        #ba{
-            float: none;
-            margin: 0px;
-            width: 30px;
-            height:30px;
-            border-bottom-right-radius: 6px;
-            padding-top: 2px;
-            background-color: white;
+        a:hover{
+          
+          text-decoration:underline;
         }
-        }   
-        }
-        input{
-            
-            width:20px;
-            height:20px;
-        }
-        p{
-        font-family: 'Times New Roman', Times, serif;
-        color: white;
-        font-size: 20px;
-        }
-            
+      }
 }
+
+  

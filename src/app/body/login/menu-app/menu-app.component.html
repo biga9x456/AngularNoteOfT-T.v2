@@ -3,10 +3,10 @@
   <div>
     
     <!-- Reminder -->
-    <div class="container1">
-      <img class="image" src="../../../assets/reminder.png" width="300px" height="300px" />
+    <div class="container1" [routerLink] = "['/reminder']">
+      <img class="image" src="../../../assets/reminder.png" width="300px" height="300px"/>
       <div class="middle">
-        <div class="text"><p>Reminder</p></div>
+        <div class="text" ><p>Reminder</p></div>
       </div>
     </div>
 
@@ -20,3 +20,4 @@
     
   </div>
 </div>
+<router-outlet></router-outlet>

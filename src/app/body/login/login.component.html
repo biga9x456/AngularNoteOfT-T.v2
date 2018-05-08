@@ -1,18 +1,24 @@
 <div>
   <section class="icon">
-    <img src="../../assets/chothao.png" height="100" width="100"/>
+    <img src="../../assets/cloudicon-22.png" height="150" width="150"/>
   </section>
   
     <h3>Đăng nhập T&T</h3><br/>
-    <table align="center">
-      <tr>
-            <input placeholder="ID của bạn" class="inputleft" id="mot"> <br/>
-      </tr>
-      <tr>
-            <input type="password" placeholder="Password" class="inputleft"  id="hai">
-            <input type="image" src="../../assets/right.jpg"   id="ba">
-      </tr>
-    </table>
-    <input type="checkbox">
-    <label>Duy trì đăng nhập</label>
+    <form>
+      <div class="floating-placeholder">
+        <input id="name" [ngModelOptions]="{standalone:true}" name="name" type="text" class="input" [(ngModel)] = "username" #name="ngModel" required placeholder="ID"  autofocus>
+        <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)">
+          <div *ngIf="name.errors.required">
+           Name is required.
+          </div>
+        </div> -->
+        <!-- <label class="label" for="name">ID</label> -->
+      </div>
+      <div class="floating-placeholder">
+        <input id="password" class="input" [ngModelOptions]="{standalone:true}" name="password" type="password" class="input" [(ngModel)] = "password" required placeholder="PASSWORD"> 
+        <!-- <label class="label" for="password">Password</label> -->
+        <input type="image" src="../../assets/blg.png"width="50" id="btn" height="50"  (click)="login(username,password)" >
+      </div>
+      </form>
+    <p>Bạn chưa có tài khoản ? <a [routerLink]="['/register']">Hãy đăng kí ngay </a></p>
 </div>

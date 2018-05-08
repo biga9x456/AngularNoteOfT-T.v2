@@ -18,7 +18,7 @@
         <input id="target" type="text" [(ngModel)]="reminder" (keyup.enter)="addReminder(reminder)" placeholder="Hello there!!!">
         <li *ngFor="let item of reminders">
               <a (click)="deleteReminder($event, item)" for="">{{item.title}}</a>
-              <img src="../../../../../assets/x.png" width="15px" height="15px" (dbclick) = "deleteItem($event, item)"/>
+              <img src="../../../../../assets/x.png" width="15px" height="15px" (dbclick) = "deleteItem($event,item)"/>
         </li>
 
         <!-- <li>

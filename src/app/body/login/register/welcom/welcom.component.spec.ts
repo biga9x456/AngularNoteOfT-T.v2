@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+import { WelcomComponent } from './welcom.component';
+
+describe('WelcomComponent', () => {
+  let component: WelcomComponent;
+  let fixture: ComponentFixture<WelcomComponent>;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ WelcomComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(WelcomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
